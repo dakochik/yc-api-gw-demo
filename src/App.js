@@ -11,18 +11,18 @@ function App() {
     const [accessToken, setAccessToken] = useState(null)
     const [idToken, setIdToken] = useState(null)
     const firebaseConfig = {
-        apiKey: "AIzaSyDXoymCgfm9sBrlTdoRBxwrD6kKea0Fp-g",
-        authDomain: "api-gw-proj.firebaseapp.com",
-        projectId: "api-gw-proj",
-        storageBucket: "api-gw-proj.appspot.com",
-        messagingSenderId: "780973369163",
-        appId: "1:780973369163:web:12abdd717bd24d9742aace"
+        apiKey: "<your api key>",
+        authDomain: "<your auth domain>",
+        projectId: "<your project id>",
+        storageBucket: "<your storage bucket>",
+        messagingSenderId: "<your message sender id>",
+        appId: "<your app id>"
     };
-    const providerId = 'oidc.test'
+    const providerId = '<your provider id>'
     const app = initializeApp(firebaseConfig);
     const provider = new OAuthProvider(providerId);
 
-    const apiGwDomain = "https://falqjcb6hv6kvffk8q2m.apigw-preprod.yandexcloud.net"
+    const apiGwDomain = "https://<your api gateway url>"
 
     const callApiGateway = () => {
         const token = idToken || ''
